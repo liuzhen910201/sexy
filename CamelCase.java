@@ -39,31 +39,31 @@ public class CamelCase {
 		}
 		else if(command=='L'){
 			input=input.substring(0, input.length()-2);
-			input=upper(input);
-			input=removeUnderLine(input);
+			input=upper(input);//アンダーラインの次の文字を大文字に変換
+			input=removeUnderLine(input);//アンダーラインを削除
 			System.out.println(input);
 		}
 		else if(command=='D'){
 			input=input.substring(0, input.length()-2);
-			input=lowerFirst(input);
-			input=underLine(input);
-			input=lower(input);
+			input=lowerFirst(input);//頭文字を小文字に変換
+			input=underLine(input);//大文字の前にアンダーラインを埋め込む
+			input=lower(input);//大文字を小文字に変換
 			System.out.println(input);
 		}
 		else if(command=='U'){
 			input=input.substring(0, input.length()-2);
-			input=upFirst(input);
-			input=upper(input);
+			input=upFirst(input);//頭文字を大文字に変換
+			input=upper(input);//アンダーラインの次の文字を大文字に変換
 			System.out.println(input);
 		}
 	}
 	
-	public static String removeUnderLine(String input){//删除下划线
+	public static String removeUnderLine(String input){//アンダーラインを削除
 		input=input.replaceAll("_", "");
 		return input;
 	}
 	
-	public static String upper(String input){//下划线之后 小写转大写
+	public static String upper(String input){//アンダーラインの次の文字を大文字に変換
 		for(int i=0;i<input.length();i++){
 			if(input.substring(i, i+1).equals("_")){
 				String temp=input.substring(i+1, i+2);
@@ -73,7 +73,7 @@ public class CamelCase {
 		return input;
 	}
 	
-	public static String lower(String input){//大写转小写
+	public static String lower(String input){//大文字を小文字に変換
 		for (int i=1;i<input.length();i++){
 			if(input.substring(i, i+1).equals(input.substring(i, i+1).toUpperCase())){
 				String temp=input.substring(i, i+1);
@@ -83,7 +83,7 @@ public class CamelCase {
 		return input;
 	}
 	
-	public static String underLine(String input){//插入下划线
+	public static String underLine(String input){//大文字の前にアンダーラインを埋め込む
 		String s="_";
 		for(int i=0;i<input.length();i++){
 			if(input.substring(i, i+1).equals(input.substring(i, i+1).toUpperCase())){
@@ -95,7 +95,7 @@ public class CamelCase {
 		return input;
 	}
 	
-	public static String upFirst(String input){//头文字转大写
+	public static String upFirst(String input){//頭文字を大文字に変換
 		if(input.substring(0, 1).equals(input.substring(0,1).toLowerCase())){
 			String temp=input.substring(0,1).toUpperCase();
 			input=input.replaceFirst(input.substring(0,1),temp);
@@ -103,7 +103,7 @@ public class CamelCase {
 		return input;
 	}
 	
-	public static String lowerFirst(String input){//头文字转小写
+	public static String lowerFirst(String input){//頭文字を小文字に変換
 		if(input.substring(0, 1).equals(input.substring(0,1).toUpperCase())){
 			String temp=input.substring(0,1).toLowerCase();
 			input=input.replaceFirst(input.substring(0,1),temp);
