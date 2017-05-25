@@ -53,7 +53,7 @@ public class Estimation {
 			
 	 }
 
-	private static void read(int n) {
+	public static void read(int n) {
 		//time配列を処理する：1,0などの結果を配列に入れる
 		Scanner scanner1 = new Scanner(System.in);
 		System.out.print("Input in >");
@@ -76,7 +76,7 @@ public class Estimation {
 		check(point,name);
 	}
 	
-	private static void compute(int[][] time,int[] point) {
+	public static void compute(int[][] time,int[] point) {
 		time配列の中の一列の1の数量を計算
 		int score=0;//每一列1的个数
 		int i,j;
