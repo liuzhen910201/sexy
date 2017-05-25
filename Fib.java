@@ -1,5 +1,35 @@
 import java.util.Scanner;
 
+
+/*
+例:n=6
+再帰
+fib(6)
+=fib(5)+fib(4)
+=fib(4)+fib(3) +fib(3)+fib(2)
+=fib(3)+fib(2) +fib(2)+fib(1) +fib(2)+fib(1) +fib(1)+fib(0)
+=fib(2)+fib(1) +fib(1)+fib(0) +fib(1)+fib(0) +fib(1) +fib(1)+fib(0)  +fib(1) +fib(1) +fib(0)
+=fib(1)+fib(0) +fib(1) +fib(1)+fib(0) +fib(1)+fib(0) +fib(1) +fib(1)+fib(0) +fib(1) +fib(1) +fib(0)
+=1+0+1+1+0+1+0+1+1+0+1+1+0
+=8
+
+末尾再帰
+fib(n,x,y)
+fib(6,1,1)
+=fib(5,1,2)
+=fib(4,2,3)
+=fib(3,3,5)
+=fib(2,5,8)
+=fib(1,8,13)
+if (n<2) return x; (8)
+*/
+
+
+
+
+
+
+
 public class Fib {
 	public static void main(String[] args){
 		Scanner scanner = new Scanner(System.in);
@@ -16,6 +46,7 @@ public class Fib {
 		}
 		
 	}
+	//再帰
 	public static int fib(int n){
 		if(n==1)
 			return 1;
