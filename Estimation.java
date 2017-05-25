@@ -2,6 +2,36 @@ package new1;
 
 import java.util.*;
 
+
+
+
+/*
+main:　メインメソッド
+read:　   time配列を処理する：1,0などの結果を配列に入れる
+compute:  time配列の中の一列の1の数量を計算
+putIn:   computeの結果をpoint配列に入れる
+check:   結果(point配列)をプリンド
+
+呼び出す関係:
+		main()
+		 |
+		 |
+		 |
+		 |
+		read()——————check()
+		 |
+		 |
+		 |
+		 |
+		compute()
+		 |
+		 |
+		 |
+		 |
+		putIn()
+
+
+*/
 public class Estimation {
 	 final static int LONG=30;
 	 public static void main(String[] args){
@@ -24,7 +54,7 @@ public class Estimation {
 	 }
 
 	private static void read(int n) {
-		//输入结果至数组time （1的个数）
+		//time配列を処理する：1,0などの結果を配列に入れる
 		Scanner scanner1 = new Scanner(System.in);
 		System.out.print("Input in >");
 		int[][] time = new int[n][LONG];
@@ -47,7 +77,7 @@ public class Estimation {
 	}
 	
 	private static void compute(int[][] time,int[] point) {
-		//计算每一列1的个数
+		time配列の中の一列の1の数量を計算
 		int score=0;//每一列1的个数
 		int i,j;
 		for(j=0;j<LONG;j++){
@@ -64,7 +94,7 @@ public class Estimation {
 	}
 	
 	public static void putIn(int total,int[] point,int[][] time,int j){
-		//根据每一列1的个数 计算point并存入point数组
+		//computeの結果をpoint配列に入れる
 		for(int x=0;x<time.length;x++){
 			if(time[x][j]==1){
 				point[x]+=total;
@@ -73,7 +103,7 @@ public class Estimation {
 	}
 	
 	public static void check(int[] point,String[] name){
-		//打印最终结果
+		//結果(point配列)をプリンド
 		int temp=point[0];
 		int min=0;
 		for(int y=0;y<point.length;y++){
@@ -85,6 +115,7 @@ public class Estimation {
 		System.out.println(name[min]+"   "+point[min]);	
 	}
 	
+	// for test
 	public static void output(int[][] time){
 		for(int i=0;i<time.length;i++){
 			for(int j=0;j<30;j++){
