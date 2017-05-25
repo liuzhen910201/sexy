@@ -35,21 +35,20 @@ check:   結果(point配列)をプリンド
 public class Estimation {
 	 final static int LONG=30;
 	 public static void main(String[] args){
-		 Scanner scanner = new Scanner(System.in);
-			System.out.print("Input in >");
-			//String input = scanner.nextLine();
-			try{
-				int n=scanner.nextInt();
-				if(n==0){
-					System.out.println("プログラム終了");
-				}
-				else{
-					read(n);//输入结果至数组time
-				}
-				}catch(InputMismatchException e){
-					//例外処理
-					System.out.println("Please input a number");
-				}
+		Scanner scanner = new Scanner(System.in);
+	　　　　　System.out.print("Input in >");
+		//String input = scanner.nextLine();
+		try{
+			int n=scanner.nextInt();
+			if(n==0){											System.out.println("プログラム終了");
+			}
+			else{
+				read(n);//输入结果至数组time
+			}
+			}catch(InputMismatchException e){
+				//例外処理
+				System.out.println("Please input a number");
+			}
 			
 	 }
 
@@ -71,7 +70,6 @@ public class Estimation {
 		}
 
 		compute(time,point);//计算point 并存入数组point
-	   	//for test
 		//output(time);//打印数组time 用于测试
 		check(point,name);
 	}
