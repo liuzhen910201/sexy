@@ -77,8 +77,8 @@ public class Estimation {
 	}
 	
 	public static void compute(int[][] time,int[] point) {
-		time配列の中の一列の1の数量を計算
-		int score=0;//每一列1的个数
+		//time配列の中の一列の1の数量を計算
+		int score=0;//一列の1の数量
 		int i,j;
 		for(j=0;j<LONG;j++){
 			for(i=0;i<time.length;i++){
