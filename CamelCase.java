@@ -1,6 +1,28 @@
 package new1;
 import java.util.Scanner;
 
+
+
+
+/*
+
+メソッド1 アンダーラインの次の文字を大文字に変換
+メソッド2　アンダーラインを削除
+メソッド3　頭文字を小文字に変換
+メソッド4　大文字の前にアンダーラインを埋め込む
+メソッド5　大文字を小文字に変換
+メソッド6　頭文字を大文字に変換
+
+L	1	2
+D	3	4	5
+U	6	1
+
+if アンダーラインを削除，頭文字を小文字に変換というBを作ると，
+	if(command==‘B’){
+		メソッド2を呼び出す;
+		メソッド3を呼び出す;
+	}
+*/
 public class CamelCase {
 
 	public static void main(String[] args) {
