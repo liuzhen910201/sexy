@@ -1,1 +1,1 @@
-yes, I am lz910201.
+I am lz910201.
