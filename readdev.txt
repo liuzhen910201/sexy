@@ -1,2 +1,1 @@
-I am dev1 not dev2
-change by lz
+I am master not dev
